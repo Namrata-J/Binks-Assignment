@@ -14,9 +14,8 @@ const SingleUserDetailsPage = () => {
 
     useEffect(() => {
         dispatch(getUserDetail({ _id: userId }))
+        // eslint-disable-next-line
     }, []);
-
-    console.log(userDetail)
 
     return (
         <div className="b_single-user-listing-page">
@@ -27,7 +26,7 @@ const SingleUserDetailsPage = () => {
                     Object.keys(userDetail).length > 0 ?
                         <div className="b_user-details">
                             <div className="b_user-image-container">
-                                <img src={userDetail?.picture?.large} alt="user-image" />
+                                <img src={userDetail?.picture?.large} alt="user" />
                             </div>
                             <p className="b_user-fullname">Name - {userDetail?.name?.title} {userDetail?.name?.first} {userDetail?.name?.last}</p>
                             <p className="b_user-email">Email - {userDetail?.email}</p>
