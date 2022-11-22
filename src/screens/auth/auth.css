@@ -1,0 +1,74 @@
+@import url("../../utils/base.css");
+
+.b_auth-page {
+    align-items: center;
+    background-color: var(--gray-shade-one);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+}
+
+.b_auth-card {
+    border-radius: 0.5rem;
+    padding: 1rem;
+    width: 20rem;
+}
+
+.b_auth-card h4 {
+    color: var(--action-color);
+    text-align: center;
+}
+
+.b_auth-card label {
+    font-size: 0.9rem;
+    display: block;
+    padding: 2rem 0rem 0.3rem 0rem;
+}
+
+.b_auth-card input {
+    background: transparent;
+    padding: 0.5rem;
+}
+
+.b_auth-card, 
+.b_auth-card input {
+    border: 1px solid var(--gray-shade-two);
+}
+
+.b_auth-card button {
+    background-color: var(--primary-color);
+    border: transparent;
+    cursor: pointer;
+    margin: 1rem 0rem 0rem 0rem;
+    padding: 0.8rem 0rem;
+}
+
+.b_auth-card input,
+.b_auth-card button {
+    border-radius: 0.2rem;
+    width: 100%;
+}
+
+.b_auth-card button:hover {
+    background-color: var(--action-color);
+}
+
+.b_auth-card p,
+.b_auth-card label,
+.b_auth-card input,
+.b_auth-card button {
+    color: var(--white-color);
+}
+
+.b_auth-card p {
+    font-size: 0.9rem;
+    padding: 2rem 0rem 0rem 0rem;
+    text-align: center;
+}
+
+.b_helper-text {
+    color: red;
+    position: absolute;
+    bottom: 5rem;
+}

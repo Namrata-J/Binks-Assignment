@@ -2,7 +2,7 @@ import "./singleUserDetails.css";
 
 const SingleUserDetailsPage = () => {
     return (
-        <div></div>
+        <div>this single user details page</div>
     );
 }
 
