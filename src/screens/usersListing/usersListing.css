@@ -1,0 +1,121 @@
+@import url("../../utils/base.css");
+
+.b_users-listing-page {
+    background-color: var(--gray-shade-one);
+    height: 100vh;
+}
+
+header {
+    border-bottom: 1px solid var(--gray-shade-two);
+    justify-content: space-between;
+    height: 10vh;
+    padding: 0rem 2rem;
+}
+
+.b_users-listing-section h4,
+.b_header-logo-text {
+    color: var(--action-color);
+}
+
+.b_header-logout-btn {
+    padding: 0.7rem 1rem;
+}
+
+.b_users-listing-section {
+    padding: 1rem;
+}
+
+.b_users-listing-section h4 {
+    padding: 0rem 0rem 2rem 0rem;
+}
+
+.b_error-state {
+    color: var(--danger-color);
+}
+
+.b_error-state button {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+    margin: 1rem 0rem;
+}
+
+.b_error-state button,
+.b_header-logout-btn {
+    border: transparent;
+    border-radius: 0.2rem;
+}
+
+.b_error-state button,
+.b_header-logout-btn {
+    background-color: var(--primary-color);
+}
+
+.b_error-state button:hover,
+.b_header-logout-btn:hover {
+    background-color: var(--action-color);
+}
+
+.b_header-logout-btn,
+.b_error-state button:hover,
+.b_user {
+    cursor: pointer;
+}
+
+.b_users-listing {
+    flex-direction: column;
+    gap: 2rem;
+    overflow-y: scroll;
+    height: 75vh;
+}
+
+.b_users-listing,
+header {
+    align-items: center;
+    display: flex;
+}
+
+.b_user {
+    border: 1px solid var(--gray-shade-two);
+    border-radius: 0.2rem;
+    padding: 1.5rem 1rem;
+    width: 20rem;
+}
+
+.b_user:hover {
+    background-color: var(--gray-shade-three);
+}
+
+.b_empty-users-list,
+.b_user .b_user-name,
+.b_loader,
+.b_error-state button,
+.b_header-logout-btn {
+    color: var(--white-color);
+}
+
+.b_empty-users-list,
+.b_loader,
+.b_error-state {
+    padding-top: 10rem;
+}
+
+.b_empty-users-list,
+.b_loader,
+.b_error-state,
+.b_users-listing-section h4 {
+    text-align: center;
+}
+
+@media only screen and (max-width: 400px) {
+    .b_user {
+        width: 17rem;
+    }
+
+    .b_user .b_user-name {
+        font-size: 0.9rem;
+    }
+
+    header {
+        padding: 0rem 0.5rem;
+    }
+}
