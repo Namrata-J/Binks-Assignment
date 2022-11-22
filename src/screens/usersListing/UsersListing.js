@@ -13,6 +13,7 @@ const UsersListingPage = () => {
 
     useEffect(() => {
         dispatch(getUsersList())
+        // eslint-disable-next-line
     }, []);
 
     return (
