@@ -1,0 +1,73 @@
+@import url("../../utils/base.css");
+
+.b_single-user-listing-page {
+    background-color: var(--gray-shade-one);
+    height: 100vh;
+}
+
+.b_single-user-listing-section {
+    padding: 2rem;
+}
+
+.b_single-user-listing-section h4 {
+    color: var(--action-color);
+}
+
+.b_no-user-details-state p {
+    color: var(--white-color);
+    padding: 5rem 0rem 2rem 0rem;
+}
+
+.b_no-user-details-state button {
+    background-color: var(--primary-color);
+    border: transparent;
+    border-radius: 0.2rem;
+    color: var(--white-color);
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+}
+
+.b_no-user-details-state button:hover {
+    background-color: var(--action-color);
+}
+
+.b_user-details {
+    padding: 3rem 0rem 0rem 0rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+
+.b_user-details .b_user-image-container {
+    aspect-ratio: 1;
+    align-items: center;
+    border: 2px solid var(--white-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    width: 8rem;
+}
+
+.b_user-details img {
+    border-radius: 50%;
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+
+.b_user-details .b_user-fullname,
+.b_user-details .b_user-email {
+    color: var(--white-color);
+}
+
+@media only screen and (max-width: 730px) {
+    .b_user-details .b_user-image-container {
+        width: 5rem;
+    }
+
+    .b_user-details .b_user-fullname,
+    .b_user-details .b_user-email {
+        font-size: 0.9rem;
+}
+}

@@ -4,7 +4,8 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 const initialState = {
     error: "",
     loading: false,
-    usersList: []
+    usersList: [],
+    userDetail: {}
 }
 
 const getUsersList = createAsyncThunk("users/getUsersList", async(thunkAPI) => {
@@ -20,7 +21,10 @@ const userSlice = createSlice({
     name: "users",
     initialState,
     reducers: {
-
+        getUserDetail: (state, action) => {
+            const foundUser = state.usersList.find((user) => user.login.uuid === action.payload._id)
+            state.userDetail = foundUser ?? {}
+        }
     },
     extraReducers: {
         [getUsersList.pending]: (state) => {
@@ -40,4 +44,5 @@ const userSlice = createSlice({
 
 export { getUsersList };
 const { reducer, actions } = userSlice;
+export const { getUserDetail } = actions;
 export { reducer };

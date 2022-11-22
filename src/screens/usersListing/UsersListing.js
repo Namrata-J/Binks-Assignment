@@ -1,5 +1,6 @@
 import "./usersListing.css";
 import { useEffect } from "react";
+import { Header } from "../../components/";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { getUsersList } from "../../redux/features/user/userSlice";
@@ -16,16 +17,7 @@ const UsersListingPage = () => {
 
     return (
         <div className="b_users-listing-page">
-            <header>
-                <h4 className="b_header-logo-text">
-                    Frontend Application
-                </h4>
-                <button
-                    className="b_header-logout-btn"
-                    onClick={() => navigate("/logout")}>
-                    LogOut
-                </button>
-            </header>
+            <Header />
             <div className="b_users-listing-section">
                 <h4>Users List</h4>
                 <div className="b_users-list">
@@ -44,7 +36,10 @@ const UsersListingPage = () => {
                                         {
                                             usersList.map(
                                                 (user) =>
-                                                    <div className="b_user">
+                                                    <div
+                                                        className="b_user"
+                                                        onClick={() => navigate(`/userDetail/${user?.login?.uuid}`)}
+                                                        key={user?.login?.uuid}>
                                                         <p className="b_user-name">{user?.name?.title}. {user?.name?.first} {user?.name?.last}</p>
                                                     </div>
                                             )

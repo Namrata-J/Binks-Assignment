@@ -5,7 +5,7 @@
     height: 100vh;
 }
 
-.b_users-listing-page header {
+header {
     border-bottom: 1px solid var(--gray-shade-two);
     justify-content: space-between;
     height: 10vh;
@@ -69,7 +69,7 @@
 }
 
 .b_users-listing,
-.b_users-listing-page header {
+header {
     align-items: center;
     display: flex;
 }
@@ -104,4 +104,18 @@
 .b_error-state,
 .b_users-listing-section h4 {
     text-align: center;
+}
+
+@media only screen and (max-width: 400px) {
+    .b_user {
+        width: 17rem;
+    }
+
+    .b_user .b_user-name {
+        font-size: 0.9rem;
+    }
+
+    header {
+        padding: 0rem 0.5rem;
+    }
 }
